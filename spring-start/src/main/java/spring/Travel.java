@@ -32,7 +32,7 @@ public class Travel {
     }
 
     @Autowired
-    public void setTransportation(Transportation transportation) {
+    public void setTransportation(@Qualifier("air") Transportation transportation) {
         this.transportation = transportation;
     }
 

@@ -1,10 +1,12 @@
 package spring.impl;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import spring.Person;
 import spring.Transportation;
 
-@Component("transportation")
+@Component("plane")
+@Qualifier("air")
 public class Plane implements Transportation {
 
     @Override

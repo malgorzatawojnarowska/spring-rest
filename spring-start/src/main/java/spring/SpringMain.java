@@ -19,6 +19,15 @@ public class SpringMain {
 
         travel.travel(kowalski);
 
+        String transportationId = "bus";
+        if(args.length>0){
+            transportationId = args[0];
+        }
+
+        Transportation transportation = (Transportation)context.getBean(transportationId);
+        System.out.println("transporting kowalski directly");
+        transportation.transport(kowalski);
+
         System.out.println("done.");
     }
 }
