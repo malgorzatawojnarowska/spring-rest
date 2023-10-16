@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config></context:annotation-config>
+    <context:component-scan base-package="spring"/>
+
+    <!--<alias name="travel" alias="journey"/>-->
+
+    <!--<bean id="travel" name="trip,trip2" class="spring.Travel"
+          lazy-init="true" autowire="constructor">
+        <property name="transportation" ref="bus"/>
+        <property name="accomodation" ref="hotel"/>
+        <property name="name" ref="travelName"/>
+    </bean>-->
+
+    <!--<bean id="travelName" class="java.lang.String">
+        <constructor-arg value="Winter holiday 2024"/>
+    </bean>-->
+
+    <!--<bean id="bus" name="transportation" class="spring.impl.Bus">
+    </bean>-->
+
+    <!--<bean id="hotel" name="accomodiation" class="spring.impl.Hotel">
+        <property name="meals" ref="meals"/>
+    </bean>-->
+
+    <!--<bean id="meals" class="spring.MealsFactoryBean">
+    </bean>-->
+
+   <!-- <util:list id="meals">
+        <value>pomidorowa</value>
+        <value>schabowy</value>
+        <value>serniczek</value>
+    </util:list>-->
+
+</beans>

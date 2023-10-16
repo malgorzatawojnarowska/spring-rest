@@ -1,37 +1,35 @@
 package spring;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.core.annotation.AliasFor;
+import org.springframework.stereotype.Component;
+
+@Component("travel")
+// TODO elaborate on alias
 public class Travel {
 
-    private String name;
+    private final String name;
 
-    private Transportation transportation;
+    private final Transportation transportation;
 
-    private Accomodation accomodation;
+    private final Accomodation accomodation;
 
-    public Travel(Transportation transportation, Accomodation accomodation,  String name) {
+    //@Autowired
+    public Travel(@Air Transportation transportation, Accomodation accomodation,  String name) {
         this.transportation = transportation;
         this.accomodation = accomodation;
         this.name = name;
         System.out.println("constructing trip with parametrized constructor...");
     }
 
-    public Travel() {
+    /*public Travel() {
+        System.out.println("default constructor of Travel class");
     }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setTransportation(Transportation transportation) {
-        this.transportation = transportation;
-    }
-
-    public void setAccomodation(Accomodation accomodation) {
-        this.accomodation = accomodation;
-    }
+*/
 
     public void travel(Person p){
-        System.out.println("started travel for a person " + p);
+        System.out.println("started travel " + name + " for a person " + p);
         transportation.transport(p);
         accomodation.host(p);
         transportation.transport(p);

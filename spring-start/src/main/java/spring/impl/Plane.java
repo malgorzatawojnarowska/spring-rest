@@ -1,8 +1,12 @@
 package spring.impl;
 
+import org.springframework.stereotype.Component;
+import spring.Air;
 import spring.Person;
 import spring.Transportation;
 
+@Component
+@Air
 public class Plane implements Transportation {
 
     @Override
