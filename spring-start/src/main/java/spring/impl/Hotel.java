@@ -19,6 +19,10 @@ public class Hotel implements Accomodation {
         meals.add(gratis);
     }
 
+    public void setMeals(List<String> meals) {
+        this.meals = meals;
+    }
+
     @Override
     public void host(Person p) {
         System.out.println("person " + p + " is being hosted in hotel. meal: " + meals);

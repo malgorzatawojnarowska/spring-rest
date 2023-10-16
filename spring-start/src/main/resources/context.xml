@@ -15,6 +15,10 @@
     </bean>
 
     <bean id="hotel" class="spring.impl.Hotel">
+        <property name="meals" ref="meals"/>
+    </bean>
+
+    <bean id="meals" class="spring.MealsFactoryBean">
     </bean>
 
 </beans>
