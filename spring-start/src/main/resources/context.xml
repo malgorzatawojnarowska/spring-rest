@@ -2,28 +2,33 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-       http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+       http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd
+       http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config></context:annotation-config>
+    <context:component-scan base-package="spring"/>
 
     <alias name="travel" alias="journey"/>
 
-    <bean id="travel" name="trip,trip2" class="spring.Travel"
-          scope="singleton" lazy-init="true" autowire="byName">
-       <!-- <property name="transportation" ref="bus"/>
+    <!--<bean id="travel" name="trip,trip2" class="spring.Travel"
+          scope="singleton" lazy-init="true" autowire="constructor">
+       &lt;!&ndash; <property name="transportation" ref="bus"/>
         <property name="accomodation" ref="hotel"/>
-        <property name="name" ref="travelName"/>-->
-    </bean>
+        <property name="name" ref="travelName"/>&ndash;&gt;
+    </bean>-->
 
     <bean id="travelName" class="java.lang.String">
         <constructor-arg value="Winter holiday 2024"/>
     </bean>
 
-    <bean id="bus" name="transportation" class="spring.impl.Bus">
-    </bean>
+    <!--<bean id="bus" name="transportation" class="spring.impl.Bus">
+    </bean>-->
 
-    <bean id="hotel" name="accomodation" class="spring.impl.Hotel">
-        <property name="meals" ref="meals"/>
-    </bean>
+    <!--<bean id="hotel" name="accomodation" class="spring.impl.Hotel" autowire="byName">
+        &lt;!&ndash;<property name="meals" ref="meals"/>&ndash;&gt;
+    </bean>-->
 
     <!--<bean id="meals" class="spring.MealsFactoryBean">
     </bean>-->

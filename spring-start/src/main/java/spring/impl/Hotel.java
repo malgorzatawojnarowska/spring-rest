@@ -1,17 +1,19 @@
 package spring.impl;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 import spring.Accomodation;
 import spring.Person;
 
 
 import java.util.List;
 
-
+@Component
 public class Hotel implements Accomodation {
 
     private String gratis;
-
 
     private List<String> meals;
 
@@ -19,7 +21,9 @@ public class Hotel implements Accomodation {
         meals.add(gratis);
     }
 
-    public void setMeals(List<String> meals) {
+
+    @Autowired
+    public void setMeals( @Qualifier("meals") List<String> meals) {
         this.meals = meals;
     }
 

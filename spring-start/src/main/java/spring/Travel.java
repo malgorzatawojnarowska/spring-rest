@@ -1,5 +1,9 @@
 package spring;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Travel {
 
     private String name;
@@ -19,14 +23,17 @@ public class Travel {
         System.out.println("default constructor of Travel class");
     }
 
+    @Autowired
     public void setName(String name) {
         this.name = name;
     }
 
+    @Autowired
     public void setTransportation(Transportation transportation) {
         this.transportation = transportation;
     }
 
+    @Autowired
     public void setAccomodation(Accomodation accomodation) {
         this.accomodation = accomodation;
     }
