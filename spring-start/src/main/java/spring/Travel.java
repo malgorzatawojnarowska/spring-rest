@@ -16,6 +16,7 @@ public class Travel {
     }
 
     public Travel() {
+        System.out.println("default constructor of Travel class");
     }
 
     public void setName(String name) {
