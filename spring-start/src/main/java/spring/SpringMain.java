@@ -1,7 +1,7 @@
 package spring;
 
-import spring.impl.Bus;
-import spring.impl.Hotel;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.time.LocalDate;
 
@@ -11,14 +11,8 @@ public class SpringMain {
 
         Person kowalski = new Person("Jan", "Kowalski", new Ticket(LocalDate.now().minusDays(1)));
 
-        Transportation transportation = new Bus();
-        Accomodation accomodation = new Hotel();
-        String travelName = "Holiday 2023";
-
-        Travel travel = new Travel();
-        travel.setName(travelName);
-        travel.setTransportation(transportation);
-        travel.setAccomodation(accomodation);
+        ApplicationContext context = new ClassPathXmlApplicationContext("classpath:/context.xml");
+        Travel travel = context.getBean(Travel.class);
 
         travel.travel(kowalski);
 
