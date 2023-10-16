@@ -7,16 +7,21 @@
 
     <alias name="travel" alias="journey"/>
 
-    <bean id="travel" name="trip,trip2" class="spring.Travel" scope="singleton" lazy-init="true">
-        <property name="transportation" ref="bus"/>
+    <bean id="travel" name="trip,trip2" class="spring.Travel"
+          scope="singleton" lazy-init="true" autowire="byName">
+       <!-- <property name="transportation" ref="bus"/>
         <property name="accomodation" ref="hotel"/>
-        <property name="name" value="Summer holiday 2023"/>
+        <property name="name" ref="travelName"/>-->
     </bean>
 
-    <bean id="bus" class="spring.impl.Bus">
+    <bean id="travelName" class="java.lang.String">
+        <constructor-arg value="Winter holiday 2024"/>
     </bean>
 
-    <bean id="hotel" class="spring.impl.Hotel">
+    <bean id="bus" name="transportation" class="spring.impl.Bus">
+    </bean>
+
+    <bean id="hotel" name="accomodation" class="spring.impl.Hotel">
         <property name="meals" ref="meals"/>
     </bean>
 

@@ -32,7 +32,7 @@ public class Travel {
     }
 
     public void travel(Person p){
-        System.out.println("started travel for a person " + p);
+        System.out.println("started travel " + name + " for a person " + p);
         transportation.transport(p);
         accomodation.host(p);
         transportation.transport(p);
