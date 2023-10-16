@@ -19,9 +19,9 @@
         <property name="name" ref="travelName"/>&ndash;&gt;
     </bean>-->
 
-    <bean id="travelName" class="java.lang.String">
+    <!--<bean id="travelName" class="java.lang.String">
         <constructor-arg value="Winter holiday 2024"/>
-    </bean>
+    </bean>-->
 
     <!--<bean id="bus" name="transportation" class="spring.impl.Bus">
     </bean>-->
@@ -33,11 +33,11 @@
     <!--<bean id="meals" class="spring.MealsFactoryBean">
     </bean>-->
 
-    <util:list id="meals">
+<!--    <util:list id="meals">
         <value>pomidorowa</value>
         <value>schabowy</value>
         <value>serniczek</value>
-    </util:list>
+    </util:list>-->
 
 
 
