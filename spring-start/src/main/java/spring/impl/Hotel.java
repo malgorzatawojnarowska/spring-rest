@@ -1,6 +1,7 @@
 package spring.impl;
 
 
+import jakarta.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
@@ -15,6 +16,9 @@ public class Hotel implements Accomodation {
 
     private String gratis;
 
+    //@Autowired
+    //@Qualifier("meals")
+    @Resource
     private List<String> meals;
 
     private void addGratis(){
@@ -22,8 +26,7 @@ public class Hotel implements Accomodation {
     }
 
 
-    @Autowired
-    public void setMeals( @Qualifier("meals") List<String> meals) {
+    public void setMeals( List<String> meals) {
         this.meals = meals;
     }
 
