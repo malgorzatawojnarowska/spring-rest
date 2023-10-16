@@ -10,8 +10,8 @@
     <context:annotation-config></context:annotation-config>
     <context:component-scan base-package="spring"/>
 
-    <alias name="travel" alias="journey"/>
-
+    <!--<alias name="travel" alias="journey"/>
+-->
     <!--<bean id="travel" name="trip,trip2" class="spring.Travel"
           scope="singleton" lazy-init="true" autowire="constructor">
        &lt;!&ndash; <property name="transportation" ref="bus"/>
@@ -19,7 +19,7 @@
         <property name="name" ref="travelName"/>&ndash;&gt;
     </bean>-->
 
-    <!--<bean id="travelName" class="java.lang.String">
+<!--    <bean id="travelName" class="java.lang.String">
         <constructor-arg value="Winter holiday 2024"/>
     </bean>-->
 

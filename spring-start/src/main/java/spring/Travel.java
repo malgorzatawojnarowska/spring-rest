@@ -1,9 +1,12 @@
 package spring;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.core.annotation.AliasFor;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("travel")
+// TODO elaborate on alias
 public class Travel {
 
     private String name;
