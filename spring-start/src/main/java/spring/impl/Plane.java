@@ -1,8 +1,10 @@
 package spring.impl;
 
+import org.springframework.stereotype.Component;
 import spring.Person;
 import spring.Transportation;
 
+@Component("transportation")
 public class Plane implements Transportation {
 
     @Override
