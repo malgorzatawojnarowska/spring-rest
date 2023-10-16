@@ -13,7 +13,7 @@ public class SpringMain {
 
         ApplicationContext context = new ClassPathXmlApplicationContext("classpath:/context.xml");
         Travel travel = context.getBean(Travel.class);
-        Travel travel2 = context.getBean(Travel.class);
+        Travel travel2 = (Travel)context.getBean("journey");
 
         travel.travel(kowalski);
 
