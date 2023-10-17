@@ -1,14 +1,14 @@
 package spring.config;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Configuration
 @ComponentScan("spring")
+@PropertySource("classpath:/meals.properties")
+@EnableAspectJAutoProxy
 public class SpringConfig {
 
     @Bean("meals")

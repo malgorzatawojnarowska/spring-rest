@@ -2,6 +2,8 @@ package vod.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import vod.model.Rating;
 import vod.repository.CinemaDao;
 import vod.repository.DirectorDao;
@@ -14,6 +16,7 @@ import vod.service.MovieService;
 
 import java.util.List;
 
+@Service
 @RequiredArgsConstructor
 @Slf4j
 public class MovieServiceBean implements MovieService {

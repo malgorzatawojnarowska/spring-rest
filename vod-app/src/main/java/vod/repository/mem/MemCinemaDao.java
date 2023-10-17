@@ -1,5 +1,7 @@
 package vod.repository.mem;
 
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 import vod.model.Cinema;
 import vod.model.Movie;
 import vod.repository.CinemaDao;
@@ -10,7 +12,10 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 
+@Repository
 public class MemCinemaDao implements CinemaDao {
+
+    static List<Cinema> cinemas = new ArrayList<>();
 
     static {
         try {
@@ -19,8 +24,6 @@ public class MemCinemaDao implements CinemaDao {
             throw new RuntimeException(e);
         }
     }
-
-    static List<Cinema> cinemas = new ArrayList<>();
 
     @Override
     public List<Cinema> findAll() {
