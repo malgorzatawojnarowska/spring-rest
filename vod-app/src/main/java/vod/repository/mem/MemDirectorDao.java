@@ -1,5 +1,7 @@
 package vod.repository.mem;
 
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 import vod.model.Director;
 import vod.repository.DirectorDao;
 
@@ -7,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+@Repository
 public class MemDirectorDao implements DirectorDao {
 
     static List<Director> directors = new ArrayList<>();

@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.annotation.AliasFor;
 import org.springframework.stereotype.Component;
+import spring.config.ExecutionTime;
 
 @Component("travel")
 // TODO elaborate on alias
@@ -28,6 +29,7 @@ public class Travel {
     }
 */
 
+    @ExecutionTime
     public void travel(Person p){
         System.out.println("started travel " + name + " for a person " + p);
         transportation.transport(p);
