@@ -1,5 +1,7 @@
 package vod.web.dto;
 
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import vod.model.Director;
@@ -9,7 +11,10 @@ import vod.model.Movie;
 @NoArgsConstructor
 public class MovieDTO{
     private int id;
+    @NotNull
+    @Size(min=2, max=100)
     private String title;
+    @NotNull
     private String poster;
     private int directorId;
 
